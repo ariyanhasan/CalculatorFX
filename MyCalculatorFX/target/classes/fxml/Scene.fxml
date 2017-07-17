@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="591.0" prefWidth="393.0" style="-fx-background-image: url('/img/cal.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mdhasan.mycalculatorfx.FXMLController">
+     <children>
+      <Label fx:id="Display" alignment="CENTER_RIGHT" layoutX="13.0" layoutY="81.0" prefHeight="85.0" prefWidth="368.0" style="-fx-background-color: #5d7179; -fx-border-radius: 3,3;" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <padding>
+            <Insets right="4.0" />
+         </padding>
+      </Label>
+      <VBox layoutX="3.0" layoutY="197.0" prefHeight="380.0" prefWidth="388.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="63.0" prefWidth="395.0">
+               <children>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#AllClear" prefHeight="82.0" prefWidth="176.0" ripplerFill="#03bcff" style="-fx-background-color: #ff8002;" text="AC">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="8.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="96.0" layoutY="10.0" onAction="#operators" prefHeight="82.0" prefWidth="86.0" style="-fx-background-color: #ff3ae4;" text="\%" textFill="#ffffffe5">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font size="23.0" />
+                     </font></JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="182.0" layoutY="10.0" onAction="#operators" prefHeight="82.0" prefWidth="86.0" style="-fx-background-color: #ff3ae4;" text="/" textFill="#ffffffe5">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font size="23.0" />
+                     </font></JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="395.0">
+               <children>
+                  <JFXButton alignment="CENTER" layoutX="96.0" layoutY="10.0" onAction="#Numbers" prefHeight="82.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="7" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="182.0" layoutY="10.0" onAction="#Numbers" prefHeight="82.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="8" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="118.0" layoutY="10.0" onAction="#Numbers" prefHeight="82.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="9" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#operators" prefHeight="82.0" prefWidth="86.0" style="-fx-background-color: #ff3ae4;" text="*" textFill="#ffffffe5">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font size="23.0" />
+                     </font></JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="395.0">
+               <children>
+                  <JFXButton alignment="CENTER" onAction="#Numbers" prefHeight="82.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="4" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="10.0" layoutY="10.0" onAction="#Numbers" prefHeight="70.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="5" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="96.0" layoutY="10.0" onAction="#Numbers" prefHeight="82.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="6" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#operators" prefHeight="82.0" prefWidth="86.0" style="-fx-background-color: #ff3ae4;" text="-" textFill="#ffffffe5">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font size="23.0" />
+                     </font></JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="395.0">
+               <children>
+                  <JFXButton alignment="CENTER" onAction="#Numbers" prefHeight="82.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="1" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="10.0" layoutY="10.0" onAction="#Numbers" prefHeight="70.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="2" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="96.0" layoutY="10.0" onAction="#Numbers" prefHeight="82.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="3" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#operators" prefHeight="82.0" prefWidth="86.0" style="-fx-background-color: #ff3ae4;" text="+" textFill="#ffffffe5">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font size="23.0" />
+                     </font></JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="395.0">
+               <children>
+                  <JFXButton alignment="CENTER" onAction="#Numbers" prefHeight="82.0" prefWidth="180.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="0" textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" layoutX="10.0" layoutY="10.0" onAction="#Numbers" prefHeight="70.0" prefWidth="86.0" ripplerFill="#7fb1c3db" style="-fx-background-color: #43aed8;" text="." textFill="WHITE">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#operators" prefHeight="82.0" prefWidth="86.0" ripplerFill="#90d0e8" style="-fx-background-color: #2dd8d8;" text="=" textFill="#000000eb">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="8.0" prefHeight="39.0" prefWidth="338.0" text="Calculator - FX215" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
